@@ -20,6 +20,15 @@ const PERSONALITY_IMAGES = {
     "欲望+忧郁复合型": "images/dm.jpg",
     "傲慢+嫉妒复合型": "images/aj.jpg",
     "忧郁+暴食复合型": "images/mg.jpg",
+    "忧郁+嫉妒复合型": "images/yj.jpg",
+    "暴怒+傲慢复合型": "images/ba.jpg",
+    "暴食+嫉妒复合型": "images/bj.jpg",
+    "暴怒+傲慢+嫉妒复合型": "images/baj.jpg",
+    "暴怒+欲望复合型": "images/by.jpg",
+    "暴怒+欲望复合型": "images/by.jpg",
+    "暴怒+嫉妒复合型": "images/bjj.jpg",
+    "傲慢+忧郁复合型": "images/ay.jpg",
+    "欲望+忧郁复合型": "images/yy.jpg",
     "地狱鸡": "images/caidan.jpg",
     "平衡型": "images/balanced.jpg",
     "默认图片": "images/balanced.jpg"
@@ -292,7 +301,11 @@ function displayResult() {
             personalityType = `${activeNames.join('+')}复合型`;
             description = `你的人格是${activeNames.join('和')}的复合型。`;
             if (activeNames.includes("忧郁") && activeNames.includes("欲望")) {
-                description = "夜壑求燧，朝撷流萤。逐星而踝陷，问道则云暝……你是一个内心充满矛盾的人……";
+                description = "夜壑求燧，朝撷流萤。逐星而踝陷，问道则云暝。左持司南而磁坠，右秉莲灯而焰青。临渊欲掬月中璧，顾影方知身是萍。鲲徙南溟须积气，鹏抟渀浪待垂霆？但将盲履寄荒霰，何日灵槎渡晓冥？你是一个内心充满矛盾的人，既有强烈的追求和目标，又时常感到忧郁和迷茫。这种特质组合使你成为一个深刻的思想者。既渴望成为他人精神指引的灯塔，又在盲目寻找更亮的灯塔来寄生。共情力敏锐却导向过度沉沦幻想，有时用仪式性的决策尝试模拟对命运的掌控感，实则放弃了主动选择的权力。";
+            } else if (activeNames.includes("傲慢") && activeNames.includes("嫉妒")) {
+                description = "金谷灰飞珠犹璨，昆冈火尽玉仍温.莫将青眼观魍魉，且抱冰心对晓昏.你既有自信和优越感，又容易与他人比较，这种特质组合可能使你时而自信满满，时而感到不安。";
+            } else if (activeNames.includes("忧郁") && activeNames.includes("暴食")) {
+                description = "你常常感到忧郁，但也会通过追求物质或精神享受来缓解这种情绪。你的情感世界丰富而复杂。";
             }
         }
     }
