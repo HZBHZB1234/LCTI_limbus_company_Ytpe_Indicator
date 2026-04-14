@@ -323,3 +323,18 @@ function displayResult() {
         imageContainer.style.display = 'none';
     }
 }
+
+function removeConnectMask() {
+    const mask = document.getElementById('connection-mask');
+    if (mask) mask.remove();
+}
+
+function onAllResourcesLoaded(callback) {
+    if (document.readyState === 'complete') {
+        callback();
+    } else {
+        window.addEventListener('load', callback);
+    }
+}
+
+onAllResourcesLoaded(removeConnectMask);
